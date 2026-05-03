@@ -1,80 +1,56 @@
-import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+"use client";
 
-enum ProService {
-  YES = 1,
-  NO = 0,
-}
-interface ServiceProps {
-  title: string;
-  pro: ProService;
-  description: string;
-}
-const serviceList: ServiceProps[] = [
-  {
-    title: "Custom Domain Integration",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit adipisicing.",
-    pro: 0,
-  },
-  {
-    title: "Social Media Integrations",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, dicta.",
-    pro: 0,
-  },
-  {
-    title: "Email Marketing Integrations",
-    description: "Lorem dolor sit amet adipisicing.",
-    pro: 0,
-  },
-  {
-    title: "SEO Optimization",
-    description: "Lorem ipsum dolor sit amet consectetur.",
-    pro: 1,
-  },
+import { useLanguage } from "@/components/layout/language-provider";
+import { siteCopy } from "@/components/layout/site-copy";
+import Image from "next/image";
+
+const workImages = [
+  "https://www.topcollection.com.cn/u_file/2006/case/10/1a1ea8e60a.jpg.500x500.jpg",
+  "https://www.topcollection.com.cn/u_file/2006/case/10/e915b5350b.jpg.500x500.jpg",
+  "https://www.topcollection.com.cn/u_file/2006/case/10/6fafbd2ccc.jpg.500x500.jpg",
+  "https://www.topcollection.com.cn/u_file/2006/case/10/b5ce9131f1.jpg.500x500.jpg",
+  "https://www.topcollection.com.cn/u_file/2006/case/10/3a6a9a42b1.jpg.500x500.jpg",
 ];
 
 export const ServicesSection = () => {
+  const { language } = useLanguage();
+  const copy = siteCopy[language].works;
+
   return (
-    <section id="services" className="container py-24 sm:py-32">
-      <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
-        Services
-      </h2>
+    <section id="latest-work" className="bg-stone-950 py-24 text-white sm:py-32">
+      <div className="container">
+        <div className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <h2 className="mb-2 text-lg tracking-wider text-white/70">
+              {copy.eyebrow}
+            </h2>
+            <h3 className="text-3xl font-bold md:text-4xl">{copy.title}</h3>
+          </div>
+          <p className="max-w-xl text-white/70">{copy.body}</p>
+        </div>
 
-      <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-        Grow Your Business
-      </h2>
-      <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-        From marketing and sales to operations and strategy, we have the
-        expertise to help you achieve your goals.
-      </h3>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
-
-      <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 w-full lg:w-[60%] mx-auto">
-        {serviceList.map(({ title, description, pro }) => (
-          <Card
-            key={title}
-            className="bg-muted/60 dark:bg-card h-full relative"
-          >
-            <CardHeader>
-              <CardTitle>{title}</CardTitle>
-              <CardDescription>{description}</CardDescription>
-            </CardHeader>
-            <Badge
-              data-pro={ProService.YES === pro}
-              variant="secondary"
-              className="absolute -top-2 -right-3 data-[pro=false]:hidden"
+        <div className="grid gap-4 md:grid-cols-5">
+          {copy.items.map(({ title, label }, index) => (
+            <div
+              key={`${label}-${index}`}
+              className="group relative aspect-[4/5] overflow-hidden rounded-sm bg-white/10"
             >
-              PRO
-            </Badge>
-          </Card>
-        ))}
+              <Image
+                src={workImages[index]}
+                alt={`${label} ${title}`}
+                fill
+                sizes="(min-width: 768px) 20vw, 100vw"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                <div className="text-sm uppercase tracking-wider text-white/70">
+                  {title}
+                </div>
+                <div className="text-lg font-bold">{label}</div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -3,12 +3,13 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/layout/navbar";
+import { LanguageProvider } from "@/components/layout/language-provider";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Shadcn - Landing template",
-  description: "Landing template from Shadcn",
+  title: "Liling Top Collection",
+  description: "Top Collection 陶瓷产品展示站",
 };
 
 export default function RootLayout({
@@ -17,17 +18,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br" suppressHydrationWarning>
+    <html lang="zh-CN" suppressHydrationWarning>
       <body className={cn("min-h-screen bg-background", inter.className)}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
           disableTransitionOnChange
         >
-          <Navbar />
+          <LanguageProvider>
+            <Navbar />
 
-          {children}
+            {children}
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

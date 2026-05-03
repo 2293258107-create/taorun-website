@@ -19,22 +19,21 @@ export const CommunitySection = () => {
               <CardTitle className="text-4xl md:text-5xl font-bold flex flex-col items-center">
                 <DiscordIcon />
                 <div>
-                  Ready to join this
+                  准备加入这个
                   <span className="text-transparent pl-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
-                    Community?
+                    社群吗？
                   </span>
                 </div>
               </CardTitle>
             </CardHeader>
             <CardContent className="lg:w-[80%] text-xl text-muted-foreground">
-              Join our vibrant Discord community! Connect, share, and grow with
-              like-minded enthusiasts. Click to dive in! 🚀
+              加入我们的 Discord 社群，与志同道合的创作者交流、分享并一起成长。
             </CardContent>
 
             <CardFooter>
               <Button asChild>
                 <a href="https://discord.com/" target="_blank">
-                  Join Discord
+                  加入 Discord
                 </a>
               </Button>
             </CardFooter>

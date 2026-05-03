@@ -1,92 +1,95 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Icon } from "@/components/ui/icon";
-import { icons } from "lucide-react";
+"use client";
 
-interface FeaturesProps {
-  icon: string;
-  title: string;
-  description: string;
-}
+import { useLanguage } from "@/components/layout/language-provider";
+import { siteCopy } from "@/components/layout/site-copy";
+import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
+import Link from "next/link";
 
-const featureList: FeaturesProps[] = [
+const productAssets = [
   {
-    icon: "TabletSmartphone",
-    title: "Mobile Friendly",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+    image:
+      "https://www.topcollection.com.cn/u_file/2210/products/24/9a1d44d29d.jpg.500x500.jpg",
+    href: "https://www.topcollection.com.cn/stoneware-dinnerware-p00193p1.html",
   },
   {
-    icon: "BadgeCheck",
-    title: "Social Proof",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+    image:
+      "https://www.topcollection.com.cn/u_file/2210/products/24/fa4f80c988.jpg.500x500.jpg",
+    href: "https://www.topcollection.com.cn/stoneware-dinnerware-p00192p1.html",
   },
   {
-    icon: "Goal",
-    title: "Targeted Content",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+    image:
+      "https://www.topcollection.com.cn/u_file/2210/products/24/a7b8d86c76.jpg.500x500.jpg",
+    href: "https://www.topcollection.com.cn/stoneware-dinnerware-p00191p1.html",
   },
   {
-    icon: "PictureInPicture",
-    title: "Strong Visuals",
-    description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+    image:
+      "https://www.topcollection.com.cn/u_file/2210/products/24/e8998e1555.jpg.500x500.jpg",
+    href: "https://www.topcollection.com.cn/stoneware-dinnerware-p00190p1.html",
   },
   {
-    icon: "MousePointerClick",
-    title: "Clear CTA",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+    image:
+      "https://www.topcollection.com.cn/u_file/2006/products/10/d1c79b0845.jpg.500x500.jpg",
+    href: "https://www.topcollection.com.cn/stoneware-dinnerware-p00176p1.html",
   },
   {
-    icon: "Newspaper",
-    title: "Clear Headline",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
+    image:
+      "https://www.topcollection.com.cn/u_file/2006/products/10/e4cf72f8e1.jpg.500x500.jpg",
+    href: "https://www.topcollection.com.cn/mug-p00118p1.html",
+  },
+  {
+    image:
+      "https://www.topcollection.com.cn/u_file/2006/products/04/aae29d9e69.jpg.500x500.jpg",
+    href: "https://www.topcollection.com.cn/mug-p00096p1.html",
+  },
+  {
+    image:
+      "https://www.topcollection.com.cn/u_file/2006/products/04/c16c30a938.jpg.500x500.jpg",
+    href: "https://www.topcollection.com.cn/stoneware-dinnerware-p00095p1.html",
   },
 ];
 
 export const FeaturesSection = () => {
+  const { language } = useLanguage();
+  const copy = siteCopy[language].products;
+
   return (
-    <section id="features" className="container py-24 sm:py-32">
-      <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
-        Features
-      </h2>
+    <section id="best-selling" className="container py-24 sm:py-32">
+      <div className="mx-auto mb-12 max-w-3xl text-center">
+        <h2 className="mb-2 text-lg tracking-wider text-primary">
+          {copy.eyebrow}
+        </h2>
+        <h3 className="mb-4 text-3xl font-bold md:text-4xl">{copy.title}</h3>
+        <p className="text-lg text-muted-foreground">{copy.body}</p>
+      </div>
 
-      <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-        What Makes Us Different
-      </h2>
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {copy.items.map(({ name, label }, index) => {
+          const { image, href } = productAssets[index];
 
-      <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-        fugiat, odit similique quasi sint reiciendis quidem iure veritatis optio
-        facere tenetur.
-      </h3>
-
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {featureList.map(({ icon, title, description }) => (
-          <div key={title}>
-            <Card className="h-full bg-background border-0 shadow-none">
-              <CardHeader className="flex justify-center items-center">
-                <div className="bg-primary/20 p-2 rounded-full ring-8 ring-primary/10 mb-4">
-                  <Icon
-                    name={icon as keyof typeof icons}
-                    size={24}
-                    color="hsl(var(--primary))"
-                    className="text-primary"
+          return (
+            <Card
+              key={`${label}-${index}`}
+              className="group overflow-hidden rounded-sm border-secondary bg-background"
+            >
+              <Link href={href} target="_blank">
+                <div className="relative aspect-square overflow-hidden bg-muted">
+                  <Image
+                    src={image}
+                    alt={`${label} ${name}`}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-
-                <CardTitle>{title}</CardTitle>
-              </CardHeader>
-
-              <CardContent className="text-muted-foreground text-center">
-                {description}
-              </CardContent>
+                <CardContent className="space-y-1 p-5">
+                  <h4 className="font-bold">{label}</h4>
+                  <p className="text-sm text-muted-foreground">{name}</p>
+                </CardContent>
+              </Link>
             </Card>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

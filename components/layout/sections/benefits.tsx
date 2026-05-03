@@ -1,84 +1,72 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Icon } from "@/components/ui/icon";
-import { icons } from "lucide-react";
+"use client";
 
-interface BenefitsProps {
-  icon: string;
-  title: string;
-  description: string;
-}
-
-const benefitList: BenefitsProps[] = [
-  {
-    icon: "Blocks",
-    title: "Build Brand Trust",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
-  },
-  {
-    icon: "LineChart",
-    title: "More Leads",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
-  },
-  {
-    icon: "Wallet",
-    title: "Higher Conversions",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
-  },
-  {
-    icon: "Sparkle",
-    title: "Test Marketing Ideas",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
-  },
-];
+import { useLanguage } from "@/components/layout/language-provider";
+import { siteCopy } from "@/components/layout/site-copy";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { CheckCircle2 } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export const BenefitsSection = () => {
-  return (
-    <section id="benefits" className="container py-24 sm:py-32">
-      <div className="grid lg:grid-cols-2 place-items-center lg:gap-24">
-        <div>
-          <h2 className="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
+  const { language } = useLanguage();
+  const copy = siteCopy[language].story;
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Your Shortcut to Success
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
-            ducimus reprehenderit architecto rerum similique facere odit
-            deleniti necessitatibus quo quae.
-          </p>
+  return (
+    <section id="story" className="bg-muted/40 py-24 sm:py-32">
+      <div className="container grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+          <Image
+            src="https://www.topcollection.com.cn/u_file/2411/photo/2ac065629c.jpg"
+            alt={copy.imageAlt}
+            fill
+            sizes="(min-width: 1024px) 45vw, 100vw"
+            className="object-cover"
+          />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-4 w-full">
-          {benefitList.map(({ icon, title, description }, index) => (
-            <Card
-              key={title}
-              className="bg-muted/50 dark:bg-card hover:bg-background transition-all delay-75 group/number"
+        <div className="space-y-7">
+          <div>
+            <Badge variant="outline" className="mb-4">
+              {copy.eyebrow}
+            </Badge>
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">
+              {copy.title}
+            </h2>
+            <p className="text-lg leading-8 text-muted-foreground">
+              {copy.body}
+            </p>
+          </div>
+
+          <div className="grid gap-3">
+            {copy.points.map((point) => (
+              <div key={point} className="flex gap-3 text-muted-foreground">
+                <CheckCircle2 className="mt-1 size-5 shrink-0 text-primary" />
+                <span>{point}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-3">
+            {copy.stats.map(({ value, label }) => (
+              <Card key={label} className="rounded-sm bg-background">
+                <CardContent className="p-5">
+                  <div className="text-2xl font-bold">{value}</div>
+                  <div className="text-sm text-muted-foreground">{label}</div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <Button asChild variant="secondary">
+            <Link
+              href="https://www.topcollection.com.cn/about-us-1.html"
+              target="_blank"
             >
-              <CardHeader>
-                <div className="flex justify-between">
-                  <Icon
-                    name={icon as keyof typeof icons}
-                    size={32}
-                    color="hsl(var(--primary))"
-                    className="mb-6 text-primary"
-                  />
-                  <span className="text-5xl text-muted-foreground/15 font-medium transition-all delay-75 group-hover/number:text-muted-foreground/30">
-                    0{index + 1}
-                  </span>
-                </div>
-
-                <CardTitle>{title}</CardTitle>
-              </CardHeader>
-
-              <CardContent className="text-muted-foreground">
-                {description}
-              </CardContent>
-            </Card>
-          ))}
+              {copy.button}
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

@@ -25,9 +25,9 @@ export const TeamSection = () => {
   const teamList: TeamProps[] = [
     {
       imageUrl: "https://i.pravatar.cc/250?img=58",
-      firstName: "Leo",
-      lastName: "Miranda",
-      positions: ["Vue Fronted Developer", "Creator Of This Website"],
+      firstName: "李",
+      lastName: "明",
+      positions: ["Vue 前端开发工程师", "本站创建者"],
       socialNetworks: [
         {
           name: "LinkedIn",
@@ -46,9 +46,9 @@ export const TeamSection = () => {
     {
       imageUrl:
         "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      firstName: "Elizabeth",
-      lastName: "Moore",
-      positions: ["UI/UX Designer"],
+      firstName: "陈",
+      lastName: "思雨",
+      positions: ["UI/UX 设计师"],
       socialNetworks: [
         {
           name: "LinkedIn",
@@ -63,9 +63,9 @@ export const TeamSection = () => {
     {
       imageUrl:
         "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      firstName: "David",
-      lastName: "Diaz",
-      positions: ["Machine Learning Engineer", "TensorFlow Tinkerer"],
+      firstName: "王",
+      lastName: "子昂",
+      positions: ["机器学习工程师", "TensorFlow 实践者"],
       socialNetworks: [
         {
           name: "LinkedIn",
@@ -80,9 +80,9 @@ export const TeamSection = () => {
     {
       imageUrl:
         "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      firstName: "Sarah",
-      lastName: "Robinson",
-      positions: ["Cloud Native Developer", " Kubernetes Orchestrator"],
+      firstName: "周",
+      lastName: "安然",
+      positions: ["云原生开发工程师", "Kubernetes 编排专家"],
       socialNetworks: [
         {
           name: "LinkedIn",
@@ -101,9 +101,9 @@ export const TeamSection = () => {
     {
       imageUrl:
         "https://images.unsplash.com/photo-1616805765352-beedbad46b2a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      firstName: "Michael",
-      lastName: "Holland",
-      positions: ["DevOps Engineer", "CI/CD Pipeline Mastermind"],
+      firstName: "林",
+      lastName: "嘉禾",
+      positions: ["DevOps 工程师", "CI/CD 流水线负责人"],
       socialNetworks: [
         {
           name: "LinkedIn",
@@ -114,9 +114,9 @@ export const TeamSection = () => {
     {
       imageUrl:
         "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      firstName: "Zoe",
-      lastName: "Garcia",
-      positions: ["JavaScript Evangelist", "Deno Champion"],
+      firstName: "赵",
+      lastName: "一诺",
+      positions: ["JavaScript 布道者", "Deno 推广者"],
       socialNetworks: [
         {
           name: "LinkedIn",
@@ -131,9 +131,9 @@ export const TeamSection = () => {
     {
       imageUrl:
         "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      firstName: "Evan",
-      lastName: "James",
-      positions: ["Backend Developer"],
+      firstName: "许",
+      lastName: "知远",
+      positions: ["后端开发工程师"],
       socialNetworks: [
         {
           name: "LinkedIn",
@@ -152,9 +152,9 @@ export const TeamSection = () => {
     {
       imageUrl:
         "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1573497019236-17f8177b81e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      firstName: "Pam",
-      lastName: "Taylor",
-      positions: ["Fullstack Developer", "UX Researcher"],
+      firstName: "顾",
+      lastName: "清越",
+      positions: ["全栈开发工程师", "用户体验研究员"],
       socialNetworks: [
         {
           name: "X",
@@ -178,11 +178,11 @@ export const TeamSection = () => {
     <section id="team" className="container lg:w-[75%] py-24 sm:py-32">
       <div className="text-center mb-8">
         <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
-          Team
+          团队
         </h2>
 
         <h2 className="text-3xl md:text-4xl text-center font-bold">
-          The Company Dream Team
+          公司梦之队
         </h2>
       </div>
 
@@ -208,7 +208,7 @@ export const TeamSection = () => {
                 </div>
                 <CardTitle className="py-6 pb-4 px-6">
                   {firstName}
-                  <span className="text-primary ml-2">{lastName}</span>
+                  <span className="text-primary">{lastName}</span>
                 </CardTitle>
               </CardHeader>
               {positions.map((position, index) => (

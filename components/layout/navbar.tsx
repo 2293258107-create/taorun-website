@@ -1,15 +1,12 @@
 "use client";
-import { ChevronsDown, Github, Menu } from "lucide-react";
+
+import { ExternalLink, Globe2, Menu } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-import {
-  Sheet,
-  SheetContent,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "../ui/sheet";
-import { Separator } from "../ui/separator";
+import { useLanguage } from "@/components/layout/language-provider";
+import { siteCopy } from "@/components/layout/site-copy";
+import { Button } from "../ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -18,90 +15,101 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "../ui/navigation-menu";
-import { Button } from "../ui/button";
-import Link from "next/link";
-import Image from "next/image";
-import { ToggleTheme } from "./toogle-theme";
+import { Separator } from "../ui/separator";
+import {
+  Sheet,
+  SheetContent,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "../ui/sheet";
 
-interface RouteProps {
-  href: string;
-  label: string;
-}
+const productCategoryLinks = ["#products", "#products", "#products"];
 
-interface FeatureProps {
-  title: string;
-  description: string;
-}
+const Logo = () => (
+  <Link href="/" className="flex items-center gap-3 font-bold">
+    <span className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-sm border border-secondary bg-background">
+      <Image
+        src="https://www.topcollection.com.cn/u_file/2411/photo/6810413aec.png"
+        alt="Top Collection"
+        fill
+        sizes="40px"
+        className="object-contain p-1"
+      />
+    </span>
+    <span className="leading-tight">
+      Top Collection
+      <span className="block text-xs font-normal text-muted-foreground">
+        Liling Ceramics
+      </span>
+    </span>
+  </Link>
+);
 
-const routeList: RouteProps[] = [
-  {
-    href: "#testimonials",
-    label: "Testimonials",
-  },
-  {
-    href: "#team",
-    label: "Team",
-  },
-  {
-    href: "#contact",
-    label: "Contact",
-  },
-  {
-    href: "#faq",
-    label: "FAQ",
-  },
-];
+const LanguageToggle = ({ className = "" }: { className?: string }) => {
+  const { language, toggleLanguage } = useLanguage();
+  const copy = siteCopy[language].nav;
 
-const featureList: FeatureProps[] = [
-  {
-    title: "Showcase Your Value ",
-    description: "Highlight how your product solves user problems.",
-  },
-  {
-    title: "Build Trust",
-    description:
-      "Leverages social proof elements to establish trust and credibility.",
-  },
-  {
-    title: "Capture Leads",
-    description:
-      "Make your lead capture form visually appealing and strategically.",
-  },
-];
+  return (
+    <Button
+      type="button"
+      size="sm"
+      variant="outline"
+      onClick={toggleLanguage}
+      aria-label={copy.languageLabel}
+      className={className}
+    >
+      <Globe2 className="mr-2 size-4" />
+      {copy.languageButton}
+    </Button>
+  );
+};
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const { language } = useLanguage();
+  const copy = siteCopy[language].nav;
+  const routeList = [
+    { href: "#story", label: copy.story },
+    { href: "#best-selling", label: copy.bestSelling },
+    { href: "#latest-work", label: copy.latestWork },
+    { href: "#contact", label: copy.contact },
+  ];
+
   return (
-    <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
-      <Link href="/" className="font-bold text-lg flex items-center">
-        <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" />
-        Shadcn
-      </Link>
-      {/* <!-- Mobile --> */}
-      <div className="flex items-center lg:hidden">
+    <header className="sticky top-5 z-40 mx-auto flex w-[92%] max-w-screen-xl items-center justify-between rounded-sm border border-secondary bg-background/95 p-3 shadow-sm backdrop-blur">
+      <Logo />
+
+      <div className="flex items-center gap-2 lg:hidden">
+        <LanguageToggle className="px-3" />
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
-            <Menu
-              onClick={() => setIsOpen(!isOpen)}
-              className="cursor-pointer lg:hidden"
-            />
+            <Button variant="ghost" size="icon" aria-label={copy.openMenu}>
+              <Menu className="size-5" />
+            </Button>
           </SheetTrigger>
 
           <SheetContent
             side="left"
-            className="flex flex-col justify-between rounded-tr-2xl rounded-br-2xl bg-card border-secondary"
+            className="flex flex-col justify-between bg-background"
           >
             <div>
-              <SheetHeader className="mb-4 ml-4">
-                <SheetTitle className="flex items-center">
-                  <Link href="/" className="flex items-center">
-                    <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" />
-                    Shadcn
-                  </Link>
+              <SheetHeader className="mb-4">
+                <SheetTitle>
+                  <Logo />
                 </SheetTitle>
               </SheetHeader>
 
               <div className="flex flex-col gap-2">
+                <Button
+                  onClick={() => setIsOpen(false)}
+                  asChild
+                  variant="ghost"
+                  className="justify-start text-base"
+                >
+                  <Link href="#products">{copy.productLink}</Link>
+                </Button>
                 {routeList.map(({ href, label }) => (
                   <Button
                     key={href}
@@ -116,43 +124,49 @@ export const Navbar = () => {
               </div>
             </div>
 
-            <SheetFooter className="flex-col sm:flex-col justify-start items-start">
+            <SheetFooter className="flex-col items-start justify-start sm:flex-col">
               <Separator className="mb-2" />
-
-              <ToggleTheme />
+              <Button asChild className="w-full justify-start">
+                <Link href="mailto:trade@topcollection.com.cn">
+                  {copy.inquiry}
+                </Link>
+              </Button>
             </SheetFooter>
           </SheetContent>
         </Sheet>
       </div>
 
-      {/* <!-- Desktop --> */}
-      <NavigationMenu className="hidden lg:block mx-auto">
+      <NavigationMenu className="hidden lg:block">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="bg-card text-base">
-              Features
+            <NavigationMenuTrigger className="bg-background text-base">
+              {copy.product}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <div className="grid w-[600px] grid-cols-2 gap-5 p-4">
-                <Image
-                  src="https://avatars.githubusercontent.com/u/75042455?v=4"
-                  alt="RadixLogo"
-                  className="h-full w-full rounded-md object-cover"
-                  width={600}
-                  height={600}
-                />
+              <div className="grid w-[620px] grid-cols-[220px_1fr] gap-5 p-4">
+                <div className="relative min-h-[220px] overflow-hidden rounded-sm">
+                  <Image
+                    src="https://www.topcollection.com.cn/u_file/2006/photo/f31e86b898.jpg"
+                    alt="Top Collection dinnerware category"
+                    fill
+                    sizes="220px"
+                    className="object-cover"
+                  />
+                </div>
                 <ul className="flex flex-col gap-2">
-                  {featureList.map(({ title, description }) => (
+                  {copy.categories.map(({ title, description }, index) => (
                     <li
                       key={title}
-                      className="rounded-md p-3 text-sm hover:bg-muted"
+                      className="rounded-sm p-3 text-sm hover:bg-muted"
                     >
-                      <p className="mb-1 font-semibold leading-none text-foreground">
-                        {title}
-                      </p>
-                      <p className="line-clamp-2 text-muted-foreground">
-                        {description}
-                      </p>
+                      <Link href={productCategoryLinks[index]}>
+                        <p className="mb-1 font-semibold leading-none text-foreground">
+                          {title}
+                        </p>
+                        <p className="line-clamp-2 text-muted-foreground">
+                          {description}
+                        </p>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -163,7 +177,7 @@ export const Navbar = () => {
           <NavigationMenuItem>
             {routeList.map(({ href, label }) => (
               <NavigationMenuLink key={href} asChild>
-                <Link href={href} className="text-base px-2">
+                <Link href={href} className="px-3 text-base">
                   {label}
                 </Link>
               </NavigationMenuLink>
@@ -172,18 +186,14 @@ export const Navbar = () => {
         </NavigationMenuList>
       </NavigationMenu>
 
-      <div className="hidden lg:flex">
-        <ToggleTheme />
-
-        <Button asChild size="sm" variant="ghost" aria-label="View on GitHub">
-          <Link
-            aria-label="View on GitHub"
-            href="https://github.com/nobruf/shadcn-landing-page.git"
-            target="_blank"
-          >
-            <Github className="size-5" />
+      <div className="hidden items-center gap-2 lg:flex">
+        <Button asChild size="sm" variant="outline">
+          <Link href="https://www.topcollection.com.cn/" target="_blank">
+            {copy.originalSite}
+            <ExternalLink className="ml-2 size-4" />
           </Link>
         </Button>
+        <LanguageToggle />
       </div>
     </header>
   );
