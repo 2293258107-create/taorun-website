@@ -28,17 +28,18 @@ import {
 const productCategoryLinks = ["#products", "#products", "#products"];
 
 const Logo = () => (
-  <Link href="/" className="flex items-center gap-3 font-bold">
-    <span className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-sm border border-secondary bg-background">
+  <Link href="/" className="flex shrink-0 items-center gap-3 font-bold">
+    <span className="relative flex h-14 w-16 items-center justify-center overflow-hidden">
       <Image
-        src="https://www.topcollection.com.cn/u_file/2411/photo/6810413aec.png"
+        src="/taorun-logo-transparent.png"
         alt="Top Collection"
         fill
-        sizes="40px"
-        className="object-contain p-1"
+        sizes="64px"
+        className="object-contain"
+        priority
       />
     </span>
-    <span className="leading-tight">
+    <span className="hidden leading-tight sm:block">
       Top Collection
       <span className="block text-xs font-normal text-muted-foreground">
         Liling Ceramics
@@ -78,7 +79,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <header className="sticky top-5 z-40 mx-auto flex w-[92%] max-w-screen-xl items-center justify-between rounded-sm border border-secondary bg-background/95 p-3 shadow-sm backdrop-blur">
+    <header className="sticky top-5 z-40 mx-auto flex h-16 w-[92%] max-w-screen-xl items-center justify-between rounded-sm border border-secondary bg-background/95 px-3 shadow-sm backdrop-blur">
       <Logo />
 
       <div className="flex items-center gap-2 lg:hidden">

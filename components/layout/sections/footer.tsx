@@ -62,14 +62,14 @@ export const FooterSection = () => {
       <div className="container py-16">
         <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-[1.3fr_0.8fr_0.8fr_1.2fr]">
           <div className="space-y-5">
-            <Link href="#" className="flex items-center gap-3 font-bold">
-              <span className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-sm border border-secondary bg-background">
+            <Link href="#" className="flex items-center gap-4 font-bold">
+              <span className="relative flex h-20 w-24 items-center justify-center overflow-hidden">
                 <Image
-                  src="https://www.topcollection.com.cn/u_file/2411/photo/6810413aec.png"
+                  src="/taorun-logo-transparent.png"
                   alt="Top Collection"
                   fill
-                  sizes="48px"
-                  className="object-contain p-1"
+                  sizes="96px"
+                  className="object-contain"
                 />
               </span>
               <span className="text-2xl">Top Collection</span>
