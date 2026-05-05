@@ -25,7 +25,7 @@ import {
   SheetTrigger,
 } from "../ui/sheet";
 
-const productCategoryLinks = ["#products", "#products", "#products"];
+const productCategoryLinks = ["#products", "#products", "#products", "#products"];
 
 const Logo = () => (
   <Link href="/" className="flex shrink-0 items-center gap-3 font-bold">
@@ -85,6 +85,7 @@ export const Navbar = () => {
       label: language === "zh" ? "内销文创" : "TR Gallery",
     },
     { href: "#contact", label: copy.contact },
+    { href: "/contact-me", label: language === "zh" ? "联系我" : "Contact Me" },
   ];
 
   return (
@@ -153,23 +154,14 @@ export const Navbar = () => {
               {copy.product}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <div className="grid w-[620px] grid-cols-[220px_1fr] gap-5 p-4">
-                <div className="relative min-h-[220px] overflow-hidden rounded-sm">
-                  <Image
-                    src="https://www.topcollection.com.cn/u_file/2006/photo/f31e86b898.jpg"
-                    alt="Top Collection dinnerware category"
-                    fill
-                    sizes="220px"
-                    className="object-cover"
-                  />
-                </div>
-                <ul className="flex flex-col gap-2">
+              <div className="w-[420px] p-3">
+                <ul className="grid gap-2">
                   {copy.categories.map(({ title, description }, index) => (
                     <li
                       key={title}
                       className="rounded-sm p-3 text-sm hover:bg-muted"
                     >
-                      <Link href={productCategoryLinks[index]}>
+                      <Link href={productCategoryLinks[index]} className="block">
                         <p className="mb-1 font-semibold leading-none text-foreground">
                           {title}
                         </p>

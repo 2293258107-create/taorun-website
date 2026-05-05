@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Liling Top Collection",
-  description: "Top Collection 陶瓷产品展示站",
+  description: "Top Collection Liling Ceramics 陶瓷产品展示站",
 };
 
 export default function RootLayout({

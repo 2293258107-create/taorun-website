@@ -18,11 +18,12 @@ export const BenefitsSection = () => {
       <div className="container grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
         <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
           <Image
-            src="/taorunhui/about-1.jpg"
+            src="/taorunhui/about-heritage-8.jpg"
             alt={copy.imageAlt}
             fill
             sizes="(min-width: 1024px) 45vw, 100vw"
             className="object-cover"
+            style={{ objectPosition: "11% center" }}
           />
         </div>
 

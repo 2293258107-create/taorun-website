@@ -26,6 +26,10 @@ export const siteCopy = {
           title: "厨房配件",
           description: "围绕厨房与餐桌搭配的陶瓷配件，兼顾实用和装饰。",
         },
+        {
+          title: "摆盘器皿 Servingware",
+          description: "服务于餐桌陈列、分享餐盘和餐饮摆盘的多样化器皿系列。",
+        },
       ],
     },
     hero: {
@@ -35,7 +39,7 @@ export const siteCopy = {
         "陶润以醴陵陶瓷制造为根基，通过 Top Collection 服务全球餐桌供应，通过陶润会 TR Gallery 连接国内文创陶瓷、生活艺术中心与年轻生活方式。",
       primary: "浏览陶瓷体系",
       secondary: "查看陶润会产品",
-      imageAlt: "陶润陶瓷产品主视觉",
+      imageAlt: "Top Collection 陶瓷产品主视觉",
       stats: [
         { value: "1905", label: "百年陶瓷世家" },
         { value: "50+", label: "产品远销国家" },
@@ -172,7 +176,7 @@ export const siteCopy = {
       service: "客户服务",
       address: "中国湖南省醴陵市孙家湾镇龙虎村谢家组",
       partners: "Our Partners",
-      rights: "Taorun Ceramics © All Rights Reserved.",
+      rights: "Top Collection © All Rights Reserved.",
     },
   },
   en: {
@@ -203,6 +207,11 @@ export const siteCopy = {
           title: "Kitchen Accessories",
           description:
             "Ceramic accessories for kitchen and tabletop styling, balancing function and decoration.",
+        },
+        {
+          title: "Servingware",
+          description:
+            "Serving pieces for table presentation, shared dishes, and restaurant plating.",
         },
       ],
     },
@@ -357,7 +366,7 @@ export const siteCopy = {
       address:
         "Xiejia Group, Longhu Village, Sunjia Wan, Liling City, Hunan Province, China",
       partners: "Our Partners",
-      rights: "Taorun Ceramics © All Rights Reserved.",
+      rights: "Top Collection © All Rights Reserved.",
     },
   },
 } as const;

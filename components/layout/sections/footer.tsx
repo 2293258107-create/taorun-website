@@ -56,7 +56,6 @@ const partners = [
 export const FooterSection = () => {
   const { language } = useLanguage();
   const copy = siteCopy[language].footer;
-  const brandName = language === "zh" ? "陶润陶瓷" : "Taorun Ceramics";
 
   return (
     <footer id="footer" className="border-t border-secondary bg-muted/30">
@@ -73,7 +72,12 @@ export const FooterSection = () => {
                   className="object-contain"
                 />
               </span>
-              <span className="text-2xl">{brandName}</span>
+              <span className="leading-tight">
+                <span className="block text-xl font-bold">Top Collection</span>
+                <span className="block text-sm font-normal text-muted-foreground">
+                  Liling Ceramics
+                </span>
+              </span>
             </Link>
             <p className="max-w-md leading-7 text-muted-foreground">
               {copy.description}

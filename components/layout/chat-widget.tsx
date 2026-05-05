@@ -22,7 +22,7 @@ export const ChatWidget = () => {
                   智能客服
                 </div>
                 <div className="text-xs text-muted-foreground">
-                  陶润陶瓷在线咨询
+                  Top Collection 在线咨询
                 </div>
               </div>
             </div>
@@ -50,7 +50,7 @@ export const ChatWidget = () => {
               }}
               frameBorder="0"
               allow="microphone"
-              title="陶润陶瓷智能客服"
+              title="Top Collection 智能客服"
             />
           </div>
         </div>
