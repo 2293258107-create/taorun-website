@@ -9,39 +9,39 @@ import Link from "next/link";
 
 const productLinks = [
   {
-    label: "Dinnerware",
+    label: "Top Collection Dinnerware",
     href: "https://www.topcollection.com.cn/dinnerware_0035",
   },
   {
-    label: "Cups and Mugs",
+    label: "Top Collection Cups and Mugs",
     href: "https://www.topcollection.com.cn/cups-and-mugs_0036",
   },
   {
-    label: "Kitchen Accessories",
-    href: "https://www.topcollection.com.cn/kitchen-accessories_0037",
+    label: "陶润会产品",
+    href: "http://www.taorunhui.com/products.html",
   },
   {
-    label: "Servingware",
-    href: "https://www.topcollection.com.cn/servingware_0034",
+    label: "陶润会生活艺术中心",
+    href: "http://www.taorunhui.com/kj.html",
   },
 ];
 
 const aboutLinks = [
   {
-    label: "About Us",
+    label: "陶润会品牌故事",
+    href: "http://www.taorunhui.com/about.html",
+  },
+  {
+    label: "Top Collection About Us",
     href: "https://www.topcollection.com.cn/about-us-1.html",
   },
   {
-    label: "Showroom",
-    href: "https://www.topcollection.com.cn/showroom-a00014a1.html",
+    label: "合作",
+    href: "http://www.taorunhui.com/hz.html",
   },
   {
-    label: "Company News",
-    href: "https://www.topcollection.com.cn/article/company-news_c0001",
-  },
-  {
-    label: "Trade Shows",
-    href: "https://www.topcollection.com.cn/article/trade-shows_c0002",
+    label: "空间",
+    href: "http://www.taorunhui.com/kj.html",
   },
 ];
 
@@ -56,6 +56,7 @@ const partners = [
 export const FooterSection = () => {
   const { language } = useLanguage();
   const copy = siteCopy[language].footer;
+  const brandName = language === "zh" ? "陶润陶瓷" : "Taorun Ceramics";
 
   return (
     <footer id="footer" className="border-t border-secondary bg-muted/30">
@@ -72,7 +73,7 @@ export const FooterSection = () => {
                   className="object-contain"
                 />
               </span>
-              <span className="text-2xl">Top Collection</span>
+              <span className="text-2xl">{brandName}</span>
             </Link>
             <p className="max-w-md leading-7 text-muted-foreground">
               {copy.description}

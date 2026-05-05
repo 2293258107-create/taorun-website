@@ -18,7 +18,7 @@ export const BenefitsSection = () => {
       <div className="container grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
         <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
           <Image
-            src="https://www.topcollection.com.cn/u_file/2411/photo/2ac065629c.jpg"
+            src="/taorunhui/about-1.jpg"
             alt={copy.imageAlt}
             fill
             sizes="(min-width: 1024px) 45vw, 100vw"
@@ -61,7 +61,7 @@ export const BenefitsSection = () => {
 
           <Button asChild variant="secondary">
             <Link
-              href="https://www.topcollection.com.cn/about-us-1.html"
+              href="http://www.taorunhui.com/about.html"
               target="_blank"
             >
               {copy.button}

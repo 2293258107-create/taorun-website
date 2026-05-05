@@ -72,9 +72,18 @@ export const Navbar = () => {
   const { language } = useLanguage();
   const copy = siteCopy[language].nav;
   const routeList = [
-    { href: "#story", label: copy.story },
-    { href: "#best-selling", label: copy.bestSelling },
-    { href: "#latest-work", label: copy.latestWork },
+    {
+      href: "#brand-system",
+      label: language === "zh" ? "陶润体系" : "Taorun System",
+    },
+    {
+      href: "#products",
+      label: language === "zh" ? "外销产品" : "Export Lines",
+    },
+    {
+      href: "#taorunhui",
+      label: language === "zh" ? "内销文创" : "TR Gallery",
+    },
     { href: "#contact", label: copy.contact },
   ];
 
@@ -190,7 +199,13 @@ export const Navbar = () => {
       <div className="hidden items-center gap-2 lg:flex">
         <Button asChild size="sm" variant="outline">
           <Link href="https://www.topcollection.com.cn/" target="_blank">
-            {copy.originalSite}
+            Top Collection
+            <ExternalLink className="ml-2 size-4" />
+          </Link>
+        </Button>
+        <Button asChild size="sm" variant="outline">
+          <Link href="http://www.taorunhui.com/" target="_blank">
+            {language === "zh" ? "陶润会" : "TR Gallery"}
             <ExternalLink className="ml-2 size-4" />
           </Link>
         </Button>

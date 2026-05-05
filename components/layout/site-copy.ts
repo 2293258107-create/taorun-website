@@ -29,24 +29,24 @@ export const siteCopy = {
       ],
     },
     hero: {
-      badge: "醴陵陶瓷制造 · 始于 2003",
-      eyebrow: "让反应釉陶瓷走向世界餐桌",
+      badge: "源自醴陵陶瓷世家 · 1905",
+      eyebrow: "从全球制造到生活艺术的陶瓷体系",
       body:
-        "Top Collection Industrial Co.,Ltd 位于中国湖南醴陵，专注餐具、杯具、厨房配件和摆盘器皿等陶瓷产品，融合现代工艺与中国陶瓷文化。",
-      primary: "浏览产品分类",
-      secondary: "联系采购团队",
-      imageAlt: "Top Collection 陶瓷产品主视觉",
+        "陶润以醴陵陶瓷制造为根基，通过 Top Collection 服务全球餐桌供应，通过陶润会 TR Gallery 连接国内文创陶瓷、生活艺术中心与年轻生活方式。",
+      primary: "浏览陶瓷体系",
+      secondary: "查看陶润会产品",
+      imageAlt: "陶润陶瓷产品主视觉",
       stats: [
-        { value: "130,000㎡", label: "厂区用地规模" },
-        { value: "2004", label: "正式投产" },
-        { value: "BSCI", label: "SEDEX 审核基础" },
+        { value: "1905", label: "百年陶瓷世家" },
+        { value: "50+", label: "产品远销国家" },
+        { value: "Top 3", label: "日用陶瓷出口规模" },
       ],
     },
     categories: {
-      eyebrow: "产品分类",
-      title: "覆盖餐桌与厨房的陶瓷产品线",
+      eyebrow: "Top Collection 外销产品",
+      title: "面向全球市场的陶瓷产品线",
       body:
-        "从 Dinnerware 到 Cups and Mugs，Top Collection 以反应釉工艺和稳定制造能力，为全球客户提供多样化陶瓷产品选择。",
+        "Top Collection 承接陶润制造能力，从 Dinnerware 到 Cups and Mugs，以反应釉工艺和稳定生产体系，为全球客户提供多样化陶瓷产品选择。",
       items: [
         {
           title: "Dinnerware",
@@ -76,28 +76,28 @@ export const siteCopy = {
     },
     story: {
       eyebrow: "Our Story",
-      title: "我们不只是陶瓷制造者，也是陶瓷艺术的实践者",
+      title: "百年陶瓷世家的当代延续",
       body:
-        "Top Collection 希望把对完美、精致与美好生活的追求注入每一件产品。通过现代技术与设计理念结合，公司让中国传统陶瓷文化以更稳定、更具表现力的方式进入全球市场。",
-      imageAlt: "Top Collection 品牌故事",
-      button: "查看完整故事",
+        "陶润会官网介绍，陶润集团传承自1905年瓷业先行者文俊铎，立志百年企业，让陶瓷从世界走向世界。今天，陶润一方面以制造能力服务全球客户，一方面以陶润会探索文创陶瓷与生活美学。",
+      imageAlt: "陶润品牌故事",
+      button: "查看官方故事",
       points: [
-        "创始人 Tiger Wen 先生出生于醴陵，并在陶瓷行业积累了三十余年经验。",
-        "公司于 2003 年 3 月成立，2004 年 10 月正式开始生产。",
-        "反应釉工艺是 Top Collection 长期研发形成的核心特色。",
-        "工厂长期重视合规经营，并持续推进 BSCI、SEDEX 等审核要求。",
+        "1905 年，文俊铎作为釉下五彩开创者，开启醴陵陶瓷新纪元。",
+        "2003 年以来，陶润日用陶瓷出口规模已达全国前 3，产品远销 50 多个国家。",
+        "陶润会于 2015 年始创于瓷都醴陵，秉承“传承，育人，连接”的使命。",
+        "陶润会主营家居生活陶瓷和文化陶瓷礼品，并打造陶润会生活艺术中心。",
       ],
       stats: [
-        { value: "2003", label: "公司成立" },
-        { value: "130,000㎡", label: "厂区用地" },
-        { value: "Reactive Glaze", label: "反应釉特色" },
+        { value: "1905", label: "陶瓷世家源起" },
+        { value: "50+", label: "远销国家" },
+        { value: "TR Gallery", label: "文创陶瓷品牌" },
       ],
     },
     products: {
-      eyebrow: "Best Selling Products",
-      title: "热卖陶瓷产品",
+      eyebrow: "Top Collection Best Sellers",
+      title: "外销热卖陶瓷产品",
       body:
-        "围绕餐桌陈列、日用杯具和家居礼品场景，精选 Top Collection 首页展示的热卖产品。",
+        "围绕餐桌陈列、日用杯具和家居礼品场景，保留 Top Collection 官网展示的热卖产品，作为陶润全球供应能力的一部分。",
       items: [
         { name: "Stoneware Dinnerware", label: "炻瓷餐具套装" },
         { name: "Stoneware Dinnerware", label: "反应釉餐盘组合" },
@@ -124,10 +124,10 @@ export const siteCopy = {
     },
     contact: {
       eyebrow: "Contact Us",
-      title: "联系 Top Collection 采购团队",
+      title: "联系陶润采购与合作团队",
       body:
-        "如果你正在寻找餐具、杯具、厨房配件或摆盘器皿供应商，可以把产品方向、数量和交付需求告诉我们，团队会通过邮件与你继续沟通。",
-      cardTitle: "发送产品询盘",
+        "如果你正在寻找外销餐具、杯具、厨房配件、摆盘器皿供应，或希望了解陶润会文创陶瓷、礼品定制与生活艺术中心合作，可以把需求告诉我们，团队会通过邮件继续沟通。",
+      cardTitle: "发送合作咨询",
       lastName: "姓氏",
       firstName: "名字",
       lastNamePlaceholder: "张",
@@ -137,8 +137,8 @@ export const siteCopy = {
       subject: "咨询主题",
       subjectPlaceholder: "请选择咨询主题",
       message: "采购需求",
-      messagePlaceholder: "请简单描述产品类别、数量、目标市场或交付时间...",
-      submit: "发送询盘",
+      messagePlaceholder: "请简单描述产品类别、数量、目标市场、礼品定制或空间合作需求...",
+      submit: "发送咨询",
       footer: "表单会打开你的默认邮件客户端，并发送至 trade@topcollection.com.cn。",
       validation: {
         firstName: "名字至少需要 2 个字符",
@@ -150,29 +150,29 @@ export const siteCopy = {
       mailBody: (name: string, email: string, message: string) =>
         `你好，我是 ${name}，我的邮箱是 ${email}。\n\n${message}`,
       subjects: [
-        "餐具采购咨询",
-        "杯具采购咨询",
-        "厨房配件咨询",
-        "摆盘器皿咨询",
-        "工厂合作咨询",
+        "外销餐具采购咨询",
+        "外销杯具采购咨询",
+        "陶润会文创产品咨询",
+        "陶瓷礼品定制咨询",
+        "生活艺术中心合作咨询",
       ],
       info: [
         { title: "公司地址", value: "中国湖南省醴陵市孙家湾镇龙虎村谢家组" },
         { title: "电话", value: "0731-2318 2077" },
         { title: "传真", value: "0731-2318 2739" },
         { title: "邮箱", value: "trade@topcollection.com.cn" },
-        { title: "客户服务", value: "Top Collection Industrial Co.,Ltd" },
+        { title: "客户服务", value: "Top Collection / 陶润会 TR Gallery" },
       ],
     },
     footer: {
       description:
-        "Top Collection Industrial Co.,Ltd 专注陶瓷餐具、杯具、厨房配件和摆盘器皿，以反应釉工艺连接中国陶瓷文化与全球生活方式。",
-      products: "Products",
-      about: "About Us",
-      service: "Customer Service",
+        "陶润体系连接全球陶瓷制造、Top Collection 外销供应与陶润会生活艺术文创产品，以醴陵陶瓷文化回应不同市场的生活方式。",
+      products: "产品体系",
+      about: "品牌来源",
+      service: "客户服务",
       address: "中国湖南省醴陵市孙家湾镇龙虎村谢家组",
       partners: "Our Partners",
-      rights: "Top Collection © All Rights Reserved.",
+      rights: "Taorun Ceramics © All Rights Reserved.",
     },
   },
   en: {
@@ -207,24 +207,24 @@ export const siteCopy = {
       ],
     },
     hero: {
-      badge: "Liling ceramics manufacturer · Since 2003",
-      eyebrow: "Bringing reactive glaze ceramics to tables worldwide",
+      badge: "Liling ceramic lineage · Since 1905",
+      eyebrow: "From global manufacturing to ceramic lifestyle art",
       body:
-        "Top Collection Industrial Co.,Ltd is based in Liling, Hunan, China. We specialize in dinnerware, cups and mugs, kitchen accessories, and servingware, blending modern craft with Chinese ceramic culture.",
-      primary: "Browse Products",
-      secondary: "Contact Sourcing Team",
-      imageAlt: "Top Collection ceramic product hero image",
+        "Taorun is rooted in Liling ceramic manufacturing. Top Collection serves global tabletop supply, while TR Gallery connects domestic creative ceramics, lifestyle art spaces, and younger ways of living.",
+      primary: "Explore Taorun System",
+      secondary: "View TR Gallery Products",
+      imageAlt: "Taorun ceramic product hero image",
       stats: [
-        { value: "130,000㎡", label: "Factory land area" },
-        { value: "2004", label: "Production started" },
-        { value: "BSCI", label: "SEDEX audit foundation" },
+        { value: "1905", label: "Ceramic lineage" },
+        { value: "50+", label: "Countries reached" },
+        { value: "Top 3", label: "Daily ceramic export scale" },
       ],
     },
     categories: {
-      eyebrow: "Product Categories",
-      title: "Ceramic product lines for kitchen and tabletop",
+      eyebrow: "Top Collection Export Lines",
+      title: "Ceramic product lines for global markets",
       body:
-        "From dinnerware to cups and mugs, Top Collection provides diverse ceramic product options for global customers through reactive glaze craft and stable manufacturing capability.",
+        "Top Collection carries Taorun's manufacturing capability. From dinnerware to cups and mugs, it provides diverse ceramic product options for global customers through reactive glaze craft and stable production.",
       items: [
         {
           title: "Dinnerware",
@@ -254,28 +254,28 @@ export const siteCopy = {
     },
     story: {
       eyebrow: "Our Story",
-      title: "We are not only ceramic makers, but ceramic artists",
+      title: "A contemporary extension of a century-old ceramic lineage",
       body:
-        "Top Collection brings the pursuit of perfection, refinement, and a better life into every product. By combining modern technology with design philosophy, the company connects Chinese ceramic culture with the global market in a stable and expressive way.",
-      imageAlt: "Top Collection brand story",
-      button: "View Full Story",
+        "According to the official TR Gallery website, Taorun traces its ceramic lineage to Wen Junduo in 1905 and aims to let ceramics move from the world factory to a world brand. Today, Taorun serves global customers through manufacturing while TR Gallery explores creative ceramics and lifestyle aesthetics.",
+      imageAlt: "Taorun brand story",
+      button: "View Official Story",
       points: [
-        "Founder Mr. Tiger Wen was born in Liling and has over 30 years of experience in the ceramic industry.",
-        "Top Collection was established in March 2003 and began manufacturing in October 2004.",
-        "Reactive glaze technique has become a long-developed specialty of Top Collection.",
-        "The factory values compliance and continues to support BSCI and SEDEX audit requirements.",
+        "In 1905, Wen Junduo opened a new era for Liling ceramics through underglaze polychrome craft.",
+        "Since 2003, Taorun's daily ceramic export scale has reached the top three in China, with products sold to more than 50 countries.",
+        "TR Gallery was founded in Liling in 2015 with the mission of inheritance, education, and connection.",
+        "TR Gallery focuses on home lifestyle ceramics, cultural ceramic gifts, and the TR Gallery Lifestyle Art Center.",
       ],
       stats: [
-        { value: "2003", label: "Established" },
-        { value: "130,000㎡", label: "Factory land" },
-        { value: "Reactive Glaze", label: "Specialty craft" },
+        { value: "1905", label: "Ceramic lineage" },
+        { value: "50+", label: "Countries reached" },
+        { value: "TR Gallery", label: "Creative ceramic brand" },
       ],
     },
     products: {
-      eyebrow: "Best Selling Products",
-      title: "Best Selling Ceramic Products",
+      eyebrow: "Top Collection Best Sellers",
+      title: "Best-selling export ceramic products",
       body:
-        "A selection of best-selling products from the Top Collection homepage, covering tabletop display, daily mugs, and home gifting scenarios.",
+        "A selection of best-selling products from the Top Collection official site, covering tabletop display, daily mugs, and home gifting scenarios as part of Taorun's global supply capability.",
       items: [
         { name: "Stoneware Dinnerware", label: "Stoneware Dinnerware Set" },
         { name: "Stoneware Dinnerware", label: "Reactive Glaze Plate Set" },
@@ -302,10 +302,10 @@ export const siteCopy = {
     },
     contact: {
       eyebrow: "Contact Us",
-      title: "Contact the Top Collection Sourcing Team",
+      title: "Contact the Taorun Sourcing and Cooperation Team",
       body:
-        "If you are looking for a supplier of dinnerware, cups and mugs, kitchen accessories, or servingware, share your product direction, quantity, and delivery needs with us. Our team will continue the conversation by email.",
-      cardTitle: "Send Product Inquiry",
+        "If you are looking for export dinnerware, cups and mugs, kitchen accessories, servingware, TR Gallery creative ceramics, gift customization, or lifestyle art center cooperation, share your needs with us and our team will continue by email.",
+      cardTitle: "Send Cooperation Inquiry",
       lastName: "Last Name",
       firstName: "First Name",
       lastNamePlaceholder: "Smith",
@@ -316,7 +316,7 @@ export const siteCopy = {
       subjectPlaceholder: "Select a subject",
       message: "Sourcing Need",
       messagePlaceholder:
-        "Briefly describe product category, quantity, target market, or delivery time...",
+        "Briefly describe product category, quantity, target market, gift customization, or space cooperation needs...",
       submit: "Send Inquiry",
       footer:
         "The form will open your default email client and send to trade@topcollection.com.cn.",
@@ -330,11 +330,11 @@ export const siteCopy = {
       mailBody: (name: string, email: string, message: string) =>
         `Hello, I am ${name}. My email is ${email}.\n\n${message}`,
       subjects: [
-        "Dinnerware Sourcing",
-        "Cups and Mugs Sourcing",
-        "Kitchen Accessories",
-        "Servingware Sourcing",
-        "Factory Cooperation",
+        "Export Dinnerware Sourcing",
+        "Export Cups and Mugs Sourcing",
+        "TR Gallery Creative Products",
+        "Ceramic Gift Customization",
+        "Lifestyle Art Center Cooperation",
       ],
       info: [
         {
@@ -345,19 +345,19 @@ export const siteCopy = {
         { title: "Tel", value: "0731-2318 2077" },
         { title: "Fax", value: "0731-2318 2739" },
         { title: "Email", value: "trade@topcollection.com.cn" },
-        { title: "Customer Service", value: "Top Collection Industrial Co.,Ltd" },
+        { title: "Customer Service", value: "Top Collection / TR Gallery" },
       ],
     },
     footer: {
       description:
-        "Top Collection Industrial Co.,Ltd focuses on ceramic dinnerware, cups and mugs, kitchen accessories, and servingware, connecting Chinese ceramic culture with global lifestyles through reactive glaze craft.",
-      products: "Products",
-      about: "About Us",
+        "Taorun connects global ceramic manufacturing, Top Collection export supply, and TR Gallery lifestyle creative ceramics, responding to different markets through Liling ceramic culture.",
+      products: "Product System",
+      about: "Brand Sources",
       service: "Customer Service",
       address:
         "Xiejia Group, Longhu Village, Sunjia Wan, Liling City, Hunan Province, China",
       partners: "Our Partners",
-      rights: "Top Collection © All Rights Reserved.",
+      rights: "Taorun Ceramics © All Rights Reserved.",
     },
   },
 } as const;

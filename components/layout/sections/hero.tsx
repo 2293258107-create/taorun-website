@@ -11,6 +11,7 @@ import Link from "next/link";
 export const HeroSection = () => {
   const { language } = useLanguage();
   const copy = siteCopy[language].hero;
+  const brandName = language === "zh" ? "陶润陶瓷" : "Taorun Ceramics";
 
   return (
     <section className="relative -mt-24 min-h-[760px] overflow-hidden bg-stone-950 text-white">
@@ -35,7 +36,7 @@ export const HeroSection = () => {
 
           <div className="space-y-5">
             <h1 className="text-4xl font-bold leading-tight md:text-6xl">
-              Top Collection
+              {brandName}
               <span className="block text-2xl font-medium text-white/85 md:text-4xl">
                 {copy.eyebrow}
               </span>
@@ -48,7 +49,7 @@ export const HeroSection = () => {
 
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button asChild size="lg" className="font-bold group/arrow">
-              <Link href="#products">
+              <Link href="#brand-system">
                 {copy.primary}
                 <ArrowRight className="ml-2 size-5 transition-transform group-hover/arrow:translate-x-1" />
               </Link>
@@ -60,7 +61,7 @@ export const HeroSection = () => {
               variant="secondary"
               className="font-bold"
             >
-              <Link href="#contact">{copy.secondary}</Link>
+              <Link href="#taorunhui">{copy.secondary}</Link>
             </Button>
           </div>
 
