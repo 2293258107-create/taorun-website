@@ -11,7 +11,7 @@ const copy = {
     eyebrow: "陶润会内销文创",
     title: "把陶瓷变成更有色彩的日常体验",
     body:
-      "陶润会官网写道：我们希望以文化创意为驱动力，通过陶瓷持续创造多彩的日常体验，点亮和启迪每个人的生活。",
+      "我们希望以文化创意为驱动力，通过陶瓷持续创造多彩的日常体验，点亮和启迪每个人的生活。",
     categories: [
       {
         icon: Sparkles,
@@ -90,7 +90,7 @@ const copy = {
       eyebrow: "陶润会生活艺术中心",
       title: "以陶瓷为连接，汇聚时尚、设计、艺术与多元生活体验",
       body:
-        "陶润会生活艺术中心是有趣的、年轻的、自然且共鸣的。官网空间页介绍，这里包含情景展厅、文创陶瓷生活馆、陶艺体验馆、品牌馆和文化交流空间。",
+        "陶润会生活艺术中心是有趣的、年轻的、自然且共鸣的。这里包含情景展厅、文创陶瓷生活馆、陶艺体验馆、品牌馆和文化交流空间。",
       items: [
         "情景展厅：一窗一景，情景化探索陶瓷文化。",
         "文创陶瓷生活馆：各式陶瓷满足一站式选购需求。",
@@ -103,7 +103,7 @@ const copy = {
     eyebrow: "TR Gallery Domestic Creative Ceramics",
     title: "Turning ceramics into colorful everyday experiences",
     body:
-      'TR Gallery says on its official website: "My life, my color" is the brand concept it advocates, creating a more free and personalized way of life expression through ceramics.',
+      'With "My life, my color" as a brand concept, TR Gallery creates a freer and more personalized way of life expression through ceramics.',
     categories: [
       {
         icon: Sparkles,
@@ -182,7 +182,7 @@ const copy = {
       eyebrow: "TR Gallery Lifestyle Art Center",
       title: "Connecting fashion, design, art, and lifestyle through ceramics",
       body:
-        "The official space page describes the center as interesting, young, natural, and resonant, including showroom scenes, a creative ceramic store, pottery experience area, brand hall, and cultural exchange space.",
+        "The center is interesting, young, natural, and resonant, bringing together showroom scenes, a creative ceramic store, pottery experience area, brand hall, and cultural exchange space.",
       items: [
         "Scenario showroom: exploring ceramic culture through immersive scenes.",
         "Creative ceramic store: one-stop ceramic selection for daily life.",

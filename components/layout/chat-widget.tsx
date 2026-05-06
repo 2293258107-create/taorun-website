@@ -39,14 +39,13 @@ export const ChatWidget = () => {
             </Button>
           </div>
 
-          <div className="h-[min(680px,calc(100vh-9rem))] overflow-hidden bg-[#f7f1ea]">
+          <div className="h-[min(700px,calc(100vh-9rem))] overflow-hidden bg-[#f7f1ea]">
             <iframe
               src="https://udify.app/chatbot/cfoROdQTaDtToRcB"
               style={{
                 width: "100%",
-                height: "calc(100% + 56px)",
-                minHeight: "736px",
-                marginTop: "-56px",
+                height: "100%",
+                minHeight: "700px",
               }}
               frameBorder="0"
               allow="microphone"

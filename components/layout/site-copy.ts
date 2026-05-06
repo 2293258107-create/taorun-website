@@ -82,9 +82,9 @@ export const siteCopy = {
       eyebrow: "Our Story",
       title: "百年陶瓷世家的当代延续",
       body:
-        "陶润会官网介绍，陶润集团传承自1905年瓷业先行者文俊铎，立志百年企业，让陶瓷从世界走向世界。今天，陶润一方面以制造能力服务全球客户，一方面以陶润会探索文创陶瓷与生活美学。",
+        "陶润集团传承自1905年瓷业先行者文俊铎，立志百年企业，让陶瓷从世界走向世界。今天，陶润一方面以制造能力服务全球客户，一方面以陶润会探索文创陶瓷与生活美学。",
       imageAlt: "陶润品牌故事",
-      button: "查看官方故事",
+      button: "了解陶润故事",
       points: [
         "1905 年，文俊铎作为釉下五彩开创者，开启醴陵陶瓷新纪元。",
         "2003 年以来，陶润日用陶瓷出口规模已达全国前 3，产品远销 50 多个国家。",
@@ -101,7 +101,7 @@ export const siteCopy = {
       eyebrow: "Top Collection Best Sellers",
       title: "外销热卖陶瓷产品",
       body:
-        "围绕餐桌陈列、日用杯具和家居礼品场景，保留 Top Collection 官网展示的热卖产品，作为陶润全球供应能力的一部分。",
+        "围绕餐桌陈列、日用杯具和家居礼品场景，呈现 Top Collection 的热卖产品，作为陶润全球供应能力的一部分。",
       items: [
         { name: "Stoneware Dinnerware", label: "炻瓷餐具套装" },
         { name: "Stoneware Dinnerware", label: "反应釉餐盘组合" },
@@ -172,7 +172,7 @@ export const siteCopy = {
       description:
         "陶润体系连接全球陶瓷制造、Top Collection 外销供应与陶润会生活艺术文创产品，以醴陵陶瓷文化回应不同市场的生活方式。",
       products: "产品体系",
-      about: "品牌来源",
+      about: "品牌故事",
       service: "客户服务",
       address: "中国湖南省醴陵市孙家湾镇龙虎村谢家组",
       partners: "Our Partners",
@@ -265,9 +265,9 @@ export const siteCopy = {
       eyebrow: "Our Story",
       title: "A contemporary extension of a century-old ceramic lineage",
       body:
-        "According to the official TR Gallery website, Taorun traces its ceramic lineage to Wen Junduo in 1905 and aims to let ceramics move from the world factory to a world brand. Today, Taorun serves global customers through manufacturing while TR Gallery explores creative ceramics and lifestyle aesthetics.",
+        "Taorun traces its ceramic lineage to Wen Junduo in 1905 and aims to let ceramics move from the world factory to a world brand. Today, Taorun serves global customers through manufacturing while TR Gallery explores creative ceramics and lifestyle aesthetics.",
       imageAlt: "Taorun brand story",
-      button: "View Official Story",
+      button: "Explore Taorun Story",
       points: [
         "In 1905, Wen Junduo opened a new era for Liling ceramics through underglaze polychrome craft.",
         "Since 2003, Taorun's daily ceramic export scale has reached the top three in China, with products sold to more than 50 countries.",
@@ -284,7 +284,7 @@ export const siteCopy = {
       eyebrow: "Top Collection Best Sellers",
       title: "Best-selling export ceramic products",
       body:
-        "A selection of best-selling products from the Top Collection official site, covering tabletop display, daily mugs, and home gifting scenarios as part of Taorun's global supply capability.",
+        "A selection of Top Collection best-selling products covering tabletop display, daily mugs, and home gifting scenarios as part of Taorun's global supply capability.",
       items: [
         { name: "Stoneware Dinnerware", label: "Stoneware Dinnerware Set" },
         { name: "Stoneware Dinnerware", label: "Reactive Glaze Plate Set" },

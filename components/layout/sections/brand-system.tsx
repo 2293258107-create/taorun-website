@@ -13,7 +13,7 @@ const copy = {
     eyebrow: "陶润体系",
     title: "同一个陶润，一端连接全球制造，一端表达生活美学",
     body:
-      "陶润会官网介绍，陶润会隶属于陶润集团——世界一流反应釉陶瓷制造商。陶润集团传承自1905年瓷业先行者文俊铎，2003年创立以来，陶润日用陶瓷出口规模已达全国前3，产品远销50多个国家。",
+      "陶润体系承接醴陵百年陶瓷文脉，连接世界一流反应釉陶瓷制造、全球餐桌供应和国内生活艺术文创。陶润集团传承自1905年瓷业先行者文俊铎，2003年创立以来，陶润日用陶瓷出口规模已达全国前3，产品远销50多个国家。",
     lines: [
       {
         icon: Globe2,
@@ -40,14 +40,14 @@ const copy = {
       { value: "2015", label: "陶润会始创于瓷都醴陵" },
       { value: "50+", label: "产品远销国家和地区" },
     ],
-    button: "查看官方来源",
+    button: "进入品牌页面",
   },
   en: {
     eyebrow: "Taorun System",
     title:
       "One Taorun, connecting global manufacturing with lifestyle ceramics",
     body:
-      "According to the official TR Gallery website, TR Gallery belongs to Taorun Group, a world-class reactive glaze ceramic manufacturer. Taorun traces its ceramic lineage to 1905 and has built a daily ceramic export system with products sold to more than 50 countries.",
+      "The Taorun system connects Liling's century-old ceramic culture, world-class reactive glaze manufacturing, global tabletop supply, and domestic lifestyle creative ceramics. Taorun traces its ceramic lineage to 1905 and has built a daily ceramic export system with products sold to more than 50 countries.",
     lines: [
       {
         icon: Globe2,
@@ -65,7 +65,7 @@ const copy = {
         href: "http://www.taorunhui.com/about.html",
         image: "/taorunhui/about-1.jpg",
         body:
-          "TR Gallery was founded in Liling in 2015. Its official mission is inheritance, education, and connection, with the vision of becoming a world-class lifestyle ceramic brand.",
+          "TR Gallery was founded in Liling in 2015. It carries the mission of inheritance, education, and connection, with the vision of becoming a world-class lifestyle ceramic brand.",
       },
     ],
     timeline: [
@@ -74,7 +74,7 @@ const copy = {
       { value: "2015", label: "TR Gallery founded in Liling" },
       { value: "50+", label: "Countries and regions reached" },
     ],
-    button: "View Official Source",
+    button: "Open Brand Page",
   },
 } as const;
 
